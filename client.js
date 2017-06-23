@@ -25,7 +25,10 @@ $('document').ready(function() {
       $('.colors').append('<div class="block blueblock"></div> ');
       $('#bluebtn').text('Blue Blocks: ' + numBlue);
 
-
+      //This removes blocks and adjusts the counter down one.
+      //It also restarts the counter at zero.
+      //THE PROBLEM: when the counter reaches zero,
+      // it shows a negative number. Other than that moment, it acts as expected.
       var numBlueRemain = 0;
       $('.colors').on('click', '.blueblock', function() {
       numBlueRemain += 1;
