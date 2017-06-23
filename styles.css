@@ -93,41 +93,42 @@ li {
 
 
 
-#red {
+.redblock {
  background-color: #912222;
+ 
 }
 
-#red:hover {
+.redblock:hover {
  background-color: #912222;
  opacity: 0.75;
 }
 
-#blue {
+.blueblock {
   background-color: #1f5777;
 
 }
 
-#blue:hover {
+.blueblock:hover {
   background-color: #1f5777;
   opacity: 0.75;
 }
 
-#green {
+.greenblock {
   background-color: #33771f;
 
 }
 
-#green:hover {
+.greenblock:hover {
   background-color: #33771f;
   opacity: 0.75;
 }
 
-#yellow {
+.yellowblock {
   background-color: #ede43b;
 
 }
 
-#yellow:hover {
+.yellowblock:hover {
   background-color: #ede43b;
   opacity: 0.75;
 }
