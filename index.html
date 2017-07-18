@@ -10,7 +10,7 @@
   <script type="text/javascript" src="client.js"></script> -->
   </head>
   <body ng-app="myApp">
-    <div  ng-controller="GalleryController as gallery">
+    <div  ng-controller="BlocksController as blocks">
 
 
     <div id="wrapper">
@@ -26,27 +26,17 @@
       </div>
         <nav>
           <ul>
-            <li id="listR"><button id="redbtn">Red</button></li>
-            <li id="listB"><button id="bluebtn">Blue</button></li>
-            <li id="listG"><button id="greenbtn">Green</button></li>
-            <li id="listY"><button id="yellowbtn">Yellow</button></li>
+            <li id="listR"><button ng-click="blocks.color('red')">Red</button></li>
+            <li id="listB"><button ng-click="blocks.color('blue')" >Blue</button></li>
+            <li id="listG"><button ng-click="blocks.color('green')" >Green</button></li>
+            <li id="listY"><button ng-click="blocks.color('yellow')">Yellow</button></li>
           </ul>
         </nav>
       <div class="background">
           <div class="colors">
 
-              <div class="block redblock">
+               <div class="block {{color}}block" ng-repeat="color in blocks.list track by $index"> </div>
 
-              </div>
-              <div class="block blueblock">
-
-              </div>
-              <div class="block greenblock">
-
-              </div>
-              <div class="block yellowblock">
-
-              </div>
           </div>
       </div>
     </div>
