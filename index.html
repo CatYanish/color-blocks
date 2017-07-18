@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Color Blocks Fun Time with CSS</title>
-    <link rel="stylesheet" href="styles.css">
-      <script type="text/javascript" src="vendors/angular.js"></script>
-      <script type="text/javascript" src="angularclient.js"></script>
-         <!-- <script type="text/javascript" src="jquery.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Color Blocks Fun Time with CSS</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="vendors/angular.js"></script>
+  <script type="text/javascript" src="angularclient.js"></script>
+  <!-- <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="client.js"></script> -->
-  </head>
-  <body ng-app="myApp">
-    <div  ng-controller="BlocksController as blocks">
+</head>
+<body ng-app="myApp">
+  <div  ng-controller="BlocksController as blocks">
 
 
     <div id="wrapper">
       <div id="backgroundImg">
 
-              <!--#backgroundImg and .transbox are for opacity experiment -->
-              <header>
-                <div class="transbox">
-                <h1>COLOR BLOCKS</h1>
-                </div>
-              </header>
+        <!--#backgroundImg and .transbox are for opacity experiment -->
+        <header>
+          <div class="transbox">
+            <h1>COLOR BLOCKS</h1>
+          </div>
+        </header>
 
       </div>
-        <nav>
-          <ul>
-            <li id="listR"><button ng-click="blocks.color('red')">Red</button></li>
-            <li id="listB"><button ng-click="blocks.color('blue')" >Blue</button></li>
-            <li id="listG"><button ng-click="blocks.color('green')" >Green</button></li>
-            <li id="listY"><button ng-click="blocks.color('yellow')">Yellow</button></li>
-          </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li id="listR"><button  ng-click="blocks.color('red')">Red {{blocks.countred}}</button></li>
+          <li id="listB"><button ng-click="blocks.color('blue')" >Blue {{blocks.countblue}}</button></li>
+          <li id="listG"><button   ng-click="blocks.color('green')" >Green  {{blocks.countgreen}}</button></li>
+          <li id="listY"><button ng-click="blocks.color('yellow')">Yellow {{blocks.countyellow}}</button></li>
+        </ul>
+      </nav>
       <div class="background">
-          <div class="colors">
+        <div class="colors">
 
-               <div class="block {{color}}block" ng-repeat="color in blocks.list track by $index"> </div>
+          <div class="block {{color}}block" ng-repeat="color in blocks.list track by $index"> </div>
 
-          </div>
+        </div>
       </div>
     </div>
-      </div>
-  </body>
+  </div>
+</body>
 </html>
